@@ -24,3 +24,13 @@ active proctype river()
 	printf("OK!");
 }
 
+/*
+never{
+	do
+		:: (fin & gc & wg) -> break;
+		:: else;
+	od;	
+}
+*/
+ltl {!(<> fin && []( wg && gc ) )} 
+
